@@ -141,6 +141,21 @@ public class LinkedList {
     }
 
     public boolean isInIncreasingOrder() {
-        return false;  //. Replace this code with your own
+        // I would have put this if statement in the recursive method but the question said "You will need to check to
+        // make sure that there is at least one Item in the list BEFORE calling the recursive method."
+        if (head == null) {
+            return true;
+        }
+        return isInIncreasingOrderRecursive(head);
+    }
+    private boolean isInIncreasingOrderRecursive(Item startItem) {
+        // If next one is null
+        if (startItem.next == null) {
+            return true;
+        } else if (startItem.data < startItem.next.data) {
+            return isInIncreasingOrderRecursive(startItem.next);
+        } else {
+            return false;
+        }
     }
 }

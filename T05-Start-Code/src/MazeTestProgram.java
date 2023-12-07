@@ -25,5 +25,10 @@ public class MazeTestProgram {
         r.moveTo(1,1);
         m.display(1,1);
         System.out.println("Can find cheese ... " + r.canFindCheeseIn(m));
+        m = Maze.sampleMaze();
+        r.moveTo(1,1);
+        m.display(1,1);
+        System.out.println("Free Spaces = " + r.freeSpaces(m));
+        m.display(1,1);
     }
 }

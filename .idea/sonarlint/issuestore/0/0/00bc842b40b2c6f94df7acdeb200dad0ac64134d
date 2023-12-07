@@ -1,0 +1,21 @@
+
+k
+java:S1192"UDefine a constant instead of duplicating this literal "The list is sorted: " 6 times.(ÄÑïñ
+o
+java:S1192"TDefine a constant instead of duplicating this literal "
+Here is the list: " 6 times.(ì½š¼ÿÿÿÿÿ
+E
+java:S1197"*Move the array designators [] to the type.(¡þÏÖøÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(ì½š¼ÿÿÿÿÿ
+@	java:S106"+Replace this use of System.out by a logger.(ÄÑïñ
+E	java:S106
+"+Replace this use of System.out by a logger.(ì½š¼ÿÿÿÿÿ
+@	java:S106"+Replace this use of System.out by a logger.(ÄÑïñ
+E	java:S106"+Replace this use of System.out by a logger.(ì½š¼ÿÿÿÿÿ
+@	java:S106"+Replace this use of System.out by a logger.(ÄÑïñ
+E	java:S106"+Replace this use of System.out by a logger.(ì½š¼ÿÿÿÿÿ
+@	java:S106"+Replace this use of System.out by a logger.(ÄÑïñ
+E	java:S106"+Replace this use of System.out by a logger.(ì½š¼ÿÿÿÿÿ
+@	java:S106"+Replace this use of System.out by a logger.(ÄÑïñ
+E	java:S106)"+Replace this use of System.out by a logger.(ì½š¼ÿÿÿÿÿ
+@	java:S106*"+Replace this use of System.out by a logger.(ÄÑïñ

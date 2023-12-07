@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class BinaryTree {
     private String	   	data;
@@ -58,5 +59,35 @@ public class BinaryTree {
 
         return 1 + Math.max(leftChild.height(),
                 rightChild.height());
+    }
+
+    public boolean contains(String d) {
+        return containsRecursive(d, this);
+    }
+
+    private boolean containsRecursive(String d, BinaryTree treeTop) {
+        if (treeTop == null) {
+            return false;
+
+        // This if statements uses a type of comparison that was recommended by intellij that is "null safe"
+        // However, the null safety is not required as the previous if statement takes care of it
+        } else if (Objects.equals(treeTop.data, d)) {
+            return true;
+        }
+
+        // Get the two sides data
+        boolean leftSide = false;
+        if (treeTop.leftChild != null) {
+            leftSide = containsRecursive(d, treeTop.leftChild);
+        }
+
+        boolean rightSide = false;
+        // The "&& !leftSide" makes the program run very slightly quicker as it allows it to skip the right side of the
+        // tree if the left side has already found the string
+        if (treeTop.leftChild != null && !leftSide) {
+            rightSide = containsRecursive(d, treeTop.rightChild);
+        }
+        // Return true if any of them are true
+        return leftSide || rightSide;
     }
 }

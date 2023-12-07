@@ -58,4 +58,37 @@ public class Rat {
         // We tried all directions and did not find the cheese, so quit
         return false;
     }
+
+    // 1 + to include the starting location
+    public int freeSpaces(Maze m) {
+        // If the starting location is free
+        if (!(m.wallAt(row,col) || m.cheeseAt(row, col))) {
+            return 1 + freeSpacesRecursive(m, row, col);
+        }
+        return freeSpacesRecursive(m, row, col);
+    }
+
+    private int freeSpacesRecursive(Maze m, int x, int y) {
+        int total = 0;
+        m.markVisited(x,y);
+
+        // Check North, East, South, and West to see if their locations are walls or have been visited
+        // Check North
+        if (!(m.wallAt(x,y + 1) || m.hasBeenVisited(x, y + 1))) {
+            total += 1 + freeSpacesRecursive(m, x, y + 1);
+        }
+        // Check East
+        if (!(m.wallAt(x + 1,y) || m.hasBeenVisited(x + 1, y))) {
+            total += 1 + freeSpacesRecursive(m, x + 1, y);
+        }
+        // Check South
+        if (!(m.wallAt(x,y - 1) || m.hasBeenVisited(x, y - 1))) {
+            total += 1 + freeSpacesRecursive(m, x, y - 1);
+        }
+        // Check West
+        if (!(m.wallAt(x - 1,y) || m.hasBeenVisited(x - 1, y))) {
+            total += 1 + freeSpacesRecursive(m, x - 1, y);
+        }
+        return total;
+    }
 }

@@ -30,5 +30,10 @@ public class BinaryTreeTestProgram {
 
         System.out.println("Tree Height = " + root.height());
         System.out.println("Tree Leaves = " + root.leafData());
+        System.out.println("Tree contains A = " + root.contains("A")); //true
+        System.out.println("Tree contains E = " + root.contains("E")); //true
+        System.out.println("Tree contains M = " + root.contains("M")); //true
+        System.out.println("Tree contains U = " + root.contains("U")); //true
+        System.out.println("Tree contains Z = " + root.contains("Z")); //false
     }
 }
